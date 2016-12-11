@@ -9,6 +9,10 @@ $gray-medium-light: #eaeaea;
   box-sizing: border-box;
 }
 
+.alert_notice {
+  @extend .alert-success;
+}
+
 /* universal */
 html {
   overflow-y: scroll;
@@ -130,4 +134,32 @@ aside {
 .gravatar {
   float: left;
   margin-right: 10px;
+}
+
+
+/* forms */
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .form-group;
+  @extend .has-error;
+  margin-bottom: 0;
 }
